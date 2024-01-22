@@ -1,0 +1,15 @@
+@import 'styles/variables.module.scss';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  justify-content: center;
+  width: max-content;
+  align-items: center;
+
+  @media (min-width: $mediumScreen) {
+    flex-direction: row;
+    gap: 29px;
+  }
+}

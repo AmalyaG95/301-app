@@ -1,0 +1,18 @@
+.arrowPrev,
+.arrowNext {
+  position: absolute;
+
+  top: 50%;
+  transform: translateY(-50%);
+  box-shadow: 0px 4px 9px 0px #00000040;
+  border-radius: 50%;
+  z-index: 9;
+}
+
+.arrowPrev {
+  left: -17px;
+}
+
+.arrowNext {
+  right: -17px;
+}

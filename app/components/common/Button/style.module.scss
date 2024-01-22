@@ -1,0 +1,23 @@
+@import 'styles/variables.module.scss';
+
+.base {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  min-width: 221px;
+  min-height: 44px;
+  border-radius: 46px;
+  border: none;
+  cursor: pointer;
+  font-family: Noto Sans;
+  font-size: 15px;
+  font-weight: 700;
+  color: $squidInk;
+  background-color: transparent;
+
+  @media (min-width: $smallScreen) {
+    min-width: 245px;
+  }
+  
+}

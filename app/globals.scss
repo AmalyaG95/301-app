@@ -1,0 +1,87 @@
+@import 'styles/variables.module.scss';
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  color: $squidInk;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: $eigengrau;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 26px;
+
+  @media (min-width: $mediumScreen) {
+    font-size: 54px;
+  }
+}
+
+h2 {
+  font-size: 18px;
+
+  @media (min-width: $mediumScreen) {
+    font-size: 36px;
+  }
+}
+
+h3 {
+  font-size: 16px;
+
+  @media (min-width: $mediumScreen) {
+    font-size: 24px;
+  }
+}
+
+input,
+textarea {
+  font-family: Montserrat;
+  font-size: 14px;
+
+  &::placeholder {
+    color: $gray19;
+  }
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+

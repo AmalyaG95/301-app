@@ -1,0 +1,128 @@
+@import 'styles/variables.module.scss';
+
+.container {
+  padding: 0 17px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1147px;
+  margin: 0 auto;
+  position: fixed;
+  height: 58px;
+  background: $white;
+  z-index: 300;
+  right: 0;
+  left: 0;
+  top: 0;
+
+  .langAndButtons {
+    @include flexCenter;
+    gap: 29px;
+
+    .language {
+      min-width: unset;
+    }
+  }
+
+  .notifications {
+    position: absolute;
+    right: 74px;
+
+    .number {
+      color: $white;
+      @include setFontSizeAndWeight(10px, 500);
+      position: absolute;
+      right: 18px;
+    }
+  }
+
+  .language {
+    width: 33px;
+    height: 33px;
+    background-color: $brightPink;
+    border-radius: 50%;
+    border: none;
+    color: $white;
+    @include setFontSizeAndWeight(10px, 500);
+    @include flexCenter;
+  }
+
+  .menuIcon {
+    display: block;
+  }
+
+  .navlinksContainer {
+    display: none;
+  }
+}
+
+.mobileMenuContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  gap: 20px;
+  position: fixed;
+  z-index: 600;
+  background-color: $white;
+  left: 0;
+  right: 0;
+  padding: 60px 32px;
+  transform: translateY(-100%);
+  transition: all 1200ms cubic-bezier(0.1, 0.96, 0.59, 0.95);
+  border-bottom: 2px solid $squidInk;
+
+  .xIcon {
+    position: fixed;
+    top: 17px;
+    left: 17px;
+  }
+
+  .navlinksContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+
+    a {
+      @include setFontSizeAndWeight(16px, 800);
+    }
+  }
+}
+
+.active {
+  transform: translateY(0);
+}
+
+@media (min-width: $mediumScreen) {
+  .container {
+    .menuIcon {
+      display: none;
+    }
+
+    .navlinksContainer {
+      display: flex;
+      gap: 25px;
+    }
+
+    a {
+      color: $squidInk;
+      @include setFontSizeAndWeight(14px, 500);
+    }
+  }
+
+  .mobileMenuCtn {
+    display: none;
+  }
+}
+
+@media (min-width: $largeScreen) {
+  .container {
+    padding: 0;
+
+    .navlinksContainer {
+      gap: 47px;
+    }
+  }
+}

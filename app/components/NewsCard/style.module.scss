@@ -1,0 +1,61 @@
+@import 'styles/variables.module.scss';
+
+.container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  //   max-width: 600px;
+  position: relative;
+  margin-bottom: 23px;
+
+  .wrapper {
+    background-color: $white;
+    box-shadow: 0px 0px 15px 0px #222b3c4d;
+    position: relative;
+    max-width: 80%;
+    border-radius: 20px !important;
+
+    img {
+      border-radius: 20px 20px 0 0 !important;
+    }
+
+    div {
+      padding: 0 20px 18px 20px;
+      text-align: left;
+
+      h3 {
+        color: $black;
+        @include setFontSizeAndWeight(12px, 600);
+        line-height: 13px;
+        text-align: left;
+      }
+
+      span {
+        @include setFontSizeAndWeight(10px, 500);
+        line-height: normal;
+      }
+    }
+
+    &:first-child {
+      z-index: 9;
+    }
+
+    &:not(:first-child) {
+      transform: scale(0.8);
+      position: absolute;
+      top: 0;
+
+      div h3,
+      div span {
+        color: $white !important;
+      }
+    }
+
+    &:nth-child(2) {
+      left: -23px;
+    }
+    &:nth-child(3) {
+      right: -23px;
+    }
+  }
+}
